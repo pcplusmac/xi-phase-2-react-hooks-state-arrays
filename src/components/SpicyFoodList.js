@@ -3,10 +3,14 @@ import { spicyFoods, getNewRandomSpicyFood } from "../data";
 
 function SpicyFoodList() {
   const [foods, setFoods] = useState(spicyFoods);
+  // const foodsCopy = [...foods]
 
   function handleAddFood() {
     const newFood = getNewRandomSpicyFood();
     console.log(newFood);
+    const foodsCopy = [ ...foods,newFood]
+    setFoods(foodsCopy)
+    
   }
 
   const foodList = foods.map((food) => (
