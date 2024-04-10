@@ -15,8 +15,14 @@ const newSpicyFoods = [
 function getNewRandomSpicyFood() {
   const index = Math.floor(Math.random() * newSpicyFoods.length);
   const newSpicyFood = { ...newSpicyFoods[index] };
+  
+  console.log(Math.random() * newSpicyFoods.length)
+  console.log(index)
+  
   newSpicyFood.id = nextId;
   nextId++;
+ 
+ 
   return newSpicyFood;
 }
 

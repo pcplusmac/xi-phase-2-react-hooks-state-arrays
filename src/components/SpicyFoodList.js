@@ -37,6 +37,7 @@ function SpicyFoodList() {
   
 
   function handleFilterOption(event) {
+    console.log(event)
     setSelectedOpt(event.target.value)
     // setFoods(foodsChosenToDisplay)
 
@@ -53,7 +54,7 @@ function SpicyFoodList() {
 const foodList = foodsChosenToDisplay.map((food) => (
     <li key={food.id} >
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
-      <div className="button-container" style={{display:"flex",gap:"5em"}}>
+      <div className="button-container" style={{display:"flex",gap:"em"}}>
         <button style={{ display: "inline-block", marginRight: "2px", textAlign: "right" }} onClick={() => handleRemoveClick(food.id)} >remove</button>
 
         <button onClick={() => handleIncreaseClick(food.id)}> increase the heat level</button>
